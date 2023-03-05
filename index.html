@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Choose Your Car</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text" data-src="images/2021-bugatti-chiron-super-sport-300.webp">bugatti chiron</h1>
+        <h1 class="text" data-src="images/Bugatti-Centodieci.webp">bugatti cento</h1>
+        <h1 class="text" data-src="images/bugatti-divo.jpg">bugatti divo</h1>   
+        <h1 class="text" data-src="images/bugatti-la-voiture-noire.webp">bugatti voiture</h1>
+        <h1 class="text" data-src="images/Lamborghini-veneno.jpg">lamborghini veneno</h1>
+        <h1 class="text" data-src="images/pagani-neutra.jpg">pagani neutra</h1>
+        
+        <img src="images/2021-bugatti-chiron-super-sport-300.webp" class="hover-img" alt="">
+    </div>
+
+    <script>
+let container = document.querySelector('.container');
+let img = document.querySelector('.hover-img');
+document.body.onmousemove = (e) =>{
+    let x = e.pageX;
+    let y = e.pageY;
+    img.style.top = y + 'px';
+    img.style.left = x + 'px';
+}
+
+container.querySelectorAll('.text').forEach(text =>{
+  text.onmousemove = () =>{
+    img.src = text.getAttribute('data-src')
+  }
+
+});
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

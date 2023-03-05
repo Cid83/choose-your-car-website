@@ -1,0 +1,59 @@
+*{
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all .s linear;
+}
+
+html::-webkit-scrollbar{
+    width:20px;
+}
+
+html::-webkit-scrollbar-track{
+    background: #000;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+
+body{
+    background: #000;
+}
+
+.container{
+    padding: 9%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.container .text{
+    color: #fff3;
+    font-size: 6vw;
+    text-transform: capitalize;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.container .text:hover{
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.hover-img{
+    position: absolute;
+    top: 0; left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+    height: 300px;
+    width: 500px;
+    border-radius: 15px;
+}
